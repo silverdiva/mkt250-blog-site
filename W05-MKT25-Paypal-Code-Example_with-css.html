@@ -15,57 +15,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 	<style>
-		/*checkout.css styling*/
-		body {
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			font-size: 14px;
-			line-height: 1.42857143;
-			color: #333;
-			background-color: #f3ddb9;
-		}
-
-
-		.panel {
-			background-color: #fff;
-			border: 1px solid transparent;
-			border-radius: 4px;
-			-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-			box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-		}
-
-		.panel-info {
-			border-color: #999;
-		}
-
-		.panel-heading {
-			border-top-left-radius: 1px;
-			border-top-right-radius: 1px;
-		}
-
-		.panel {
-			border-radius: 1px;
-		}
-
-		.panel-info>.panel-heading {
-			color: #eee;
-			border-color: #999;
-		}
-
-		.panel-info>.panel-heading {
-			background-image: linear-gradient(to bottom, #555 0px, #888 100%);
-		}
-
-		hr {
-			border-color: #999 -moz-use-text-color -moz-use-text-color;
-		}
-
-		.panel-footer {
-			border-bottom-left-radius: 1px;
-			border-bottom-right-radius: 1px;
-			border-top: 1px solid #999;
-		}
-		/*end checkout.css styling*/
-		
 		/* Media query for mobile viewport */
 
 		@media screen and (max-width: 400px) {
@@ -115,6 +64,8 @@
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
 						<div class="panel panel-info">
 							<div class="panel-heading">Shipment Address Information</div>
+
+							<!-- Customer Shipment information -->
 							<div class="panel-body">
 								<div class="form-group">
 									<div class="col-md-12">
@@ -174,12 +125,13 @@
 							<!--end shipment address information-->
 						</div>
 					</div>
-					<!--end shipment address information-->
 
-					<!-- CC payment information -->
+
+					<!-- Payment information -->
 					<div class="panel panel-info">
 						<div class="panel-heading"><span><i class="glyphicon glyphicon-lock"></i></span> Secure Credit Card Payment Information</div>
 
+						<!-- PayPal Payments-->
 						<div class="form-group">
 							<div class="col-md-12">
 								<h4>Pay via PayPal, PayPal Credit, or Credit Card.</h4>
@@ -192,6 +144,7 @@
 							</div>
 						</div>
 
+						<!-- CC Payment Types-->
 						<div class="panel-body">
 							<div class="form-group">
 								<div class="col-md-12"><strong>Card Type:</strong></div>
@@ -204,14 +157,24 @@
                                     </select>
 								</div>
 							</div>
-							<div class="form-group">
-								<div class="col-md-12"><strong>Credit Card Number:</strong></div>
-								<div class="col-md-12"><input type="text" class="form-control" name="car_number" value="" /></div>
+						<!-- end Credit Card Payment Types-->
+
+							<!-- CREDIT CARD PAYMENT INFORMATION -->
+							
+							<!-- Credit Card # & CVV -->
+							<div>
+								<div class="form-group">
+									<div class="col-md-12"><strong>Credit Card Number:</strong></div>
+									<div class="col-md-12"><input type="text" class="form-control" name="car_number" value="" /></div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-12"><strong>Card CVV:</strong></div>
+									<div class="col-md-12"><input type="text" class="form-control" name="car_code" value="" /></div>
+								</div>
 							</div>
-							<div class="form-group">
-								<div class="col-md-12"><strong>Card CVV:</strong></div>
-								<div class="col-md-12"><input type="text" class="form-control" name="car_code" value="" /></div>
-							</div>
+							<!-- end Credit Card # & CVV -->
+
+							<!-- CC EXP Date -->
 							<div class="form-group">
 								<div class="col-md-12">
 									<strong>Expiration Date</strong>
@@ -250,13 +213,18 @@
                                 </select>
 								</div>
 							</div>
+							<!-- end CC EXP Date -->
+							
 							<!-- container element for Payment buttons -->
+							<div>
 							<div id="paypal-button-container"></div>
 							<br>
 							<a class="button-confirm" href="example-thank-you-page.html"> Submit Order</a>
-						</div>
+							</div>
+							<!-- end container element for Payment buttons -->
+						</div>	
 					</div>
-					<!-- end CC payment information -->
+					<!-- end Payment Information-->
 				</form>
 			</div>
 		</div>
