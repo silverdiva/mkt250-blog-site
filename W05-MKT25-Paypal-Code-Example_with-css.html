@@ -15,6 +15,57 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 	<style>
+		/*checkout.css styling*/
+		body {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			line-height: 1.42857143;
+			color: #333;
+			background-color: #f3ddb9;
+		}
+
+
+		.panel {
+			background-color: #fff;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+			box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+		}
+
+		.panel-info {
+			border-color: #999;
+		}
+
+		.panel-heading {
+			border-top-left-radius: 1px;
+			border-top-right-radius: 1px;
+		}
+
+		.panel {
+			border-radius: 1px;
+		}
+
+		.panel-info>.panel-heading {
+			color: #eee;
+			border-color: #999;
+		}
+
+		.panel-info>.panel-heading {
+			background-image: linear-gradient(to bottom, #555 0px, #888 100%);
+		}
+
+		hr {
+			border-color: #999 -moz-use-text-color -moz-use-text-color;
+		}
+
+		.panel-footer {
+			border-bottom-left-radius: 1px;
+			border-bottom-right-radius: 1px;
+			border-top: 1px solid #999;
+		}
+		/*end checkout.css styling*/
+		
 		/* Media query for mobile viewport */
 
 		@media screen and (max-width: 400px) {
@@ -29,6 +80,7 @@
 				width: 250px;
 			}
 		}
+
 	</style>
 </head>
 
@@ -43,7 +95,7 @@
 					</div>
 					<div class="row">
 						<div style="display: table; margin: auto;">
-							<a class="button" href="index-cart.php"> Back to Shopping</a>
+							<a class="button" href="example-page.html"> Back to Shopping</a>
 						</div>
 					</div>
 
@@ -58,7 +110,7 @@
 				<form class="form-horizontal" method="post" action="">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-push-6 col-sm-push-6">
 					</div>
-					
+
 					<!--shipment address information-->
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
 						<div class="panel panel-info">
@@ -123,7 +175,7 @@
 						</div>
 					</div>
 					<!--end shipment address information-->
-					
+
 					<!-- CC payment information -->
 					<div class="panel panel-info">
 						<div class="panel-heading"><span><i class="glyphicon glyphicon-lock"></i></span> Secure Credit Card Payment Information</div>
@@ -201,7 +253,7 @@
 							<!-- container element for Payment buttons -->
 							<div id="paypal-button-container"></div>
 							<br>
-							<a class="button-confirm" href="thankyou-shoppingcart.php"> Submit Order</a>
+							<a class="button-confirm" href="example-thank-you-page.html"> Submit Order</a>
 						</div>
 					</div>
 					<!-- end CC payment information -->
@@ -215,6 +267,7 @@
 		<script>
 			// Render the PayPal button into #paypal-button-container
 			paypal.Buttons().render('#paypal-button-container');
+
 		</script>
 	</main>
 	<script src="scripts/scripts.js"></script>
